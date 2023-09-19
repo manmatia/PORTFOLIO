@@ -31,9 +31,9 @@ const theme=  createTheme({
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <ThemeProvider theme={theme}>
-    <React.StrictMode>
+    {/* <React.StrictMode> */}
       <CssBaseline/>
       <App />
-    </React.StrictMode>
+    {/* </React.StrictMode> */}
   </ThemeProvider>
 );
