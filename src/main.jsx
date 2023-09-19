@@ -29,20 +29,15 @@ const theme=  createTheme({
   },
 });
 
-// ReactDOM.createRoot(document.getElementById('root')).render(
-//   <ThemeProvider theme={theme}>
-//     {/* <React.StrictMode> */}
-//       <CssBaseline/>
-//       <App />
-//     {/* </React.StrictMode> */}
-//   </ThemeProvider>
-// );
+const root = document.getElementById('root');
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-
-root.render(
-  <ThemeProvider theme={theme}>
-    <CssBaseline />
-    <App />
-  </ThemeProvider>
+ReactDOM.render(
+  // <React.StrictMode>
+    <ThemeProvider theme={theme}>
+      <CssBaseline />
+      <App />
+    </ThemeProvider>,
+  //  </React.StrictMode>
+  
+  root
 );
