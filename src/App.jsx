@@ -29,8 +29,8 @@ export default function App() {
       <ResponsiveAppBar />
       <br />
       <div className="section" id="pagina1">
-        <Typography variant="h2" color={"black"} marginLeft={5} >Matias Graneros</Typography>
-        <Typography data-aos="zoom-out-up" variant="h5" color={"black"} marginLeft={5}>Full Stack Developer</Typography>
+        <Typography variant="h2" color={"white"} marginLeft={5} >Matias Graneros</Typography>
+        <Typography data-aos="zoom-out-up" variant="h5" color={"white"} marginLeft={5}>Full Stack Developer</Typography>
 
         <Paper sx={{
           height: "90%",
@@ -63,7 +63,7 @@ export default function App() {
 
                 }}
               >
-                <Typography color={"black"}>
+                <Typography color={"white"}>
                   Soy un apasionado de la tecnología y un desarrollador Full Stack.
 
                   Completé con éxito un riguroso bootcamp en SoyHenry 👨🏽‍🎓. Donde perfeccioné mis habilidades en tecnologías clave como HTML5, CSS3, JavaScript, Node.js, Express, React, Redux, SQL, Sequelize y Git, entre otras.
