@@ -176,12 +176,11 @@ export default function Proyectos() {
                     <Box
                       component="img"
                       sx={{
-                        height: 400,
-                        whidth: 400,
+                        height: "100%",
+                        width: "100%",
                         display: 'block',
                         maxWidth: 600,
                         overflow: 'hidden',
-                        width: '100%',
                         borderRadius: 2
                       }}
                       src={step.imgPath}
@@ -281,8 +280,7 @@ export default function Proyectos() {
                     <Box
                       component="img"
                       sx={{
-                        height: 400,
-                        whidth: 400,
+                        height: "100%",
                         display: 'block',
                         maxWidth: 600,
                         overflow: 'hidden',

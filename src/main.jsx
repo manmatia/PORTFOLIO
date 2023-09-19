@@ -32,12 +32,12 @@ const theme=  createTheme({
 const root = document.getElementById('root');
 
 ReactDOM.render(
-  // <React.StrictMode>
+   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <CssBaseline />
       <App />
-    </ThemeProvider>,
-  //  </React.StrictMode>
+    </ThemeProvider>
+   </React.StrictMode>,
   
   root
 );

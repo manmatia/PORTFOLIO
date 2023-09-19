@@ -14,7 +14,6 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import styled from "@emotion/styled";
 import mg from "../assets/mg.png";
-import { Link } from 'react-scroll';
 
 const pages = [ 'Tecnologias', 'Proyectos', 'Contacto'];
 const settings = ['Descargar cv', "Contactame"];
@@ -39,7 +38,6 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
 
     if (setting === "Descargar cv") {
-
       const downloadLink = document.createElement("a");
       downloadLink.href = "./CVMGPLANO.pdf"; 
       downloadLink.download = "CV_Matias_Graneros.pdf";
@@ -53,7 +51,6 @@ function ResponsiveAppBar() {
       const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
-
       
       window.open(mailtoUrl);
     }
@@ -74,7 +71,7 @@ function ResponsiveAppBar() {
     width: 40,
     height: "100%",
     boxShadow: '10px',
-    borderRadius:2
+    borderRadius: 2
   });
 
   return (
@@ -129,15 +126,12 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem  key={page} onClick={handleCloseNavMenu}>
-                  <Link
-                    to={page.toLowerCase()}
-                    spy={true}
-                    smooth={true}
-                    duration={500}
-                    style={{ textDecoration: 'none' }}
+                  <a
+                    href={`#${page.toLowerCase()}`}
+                    style={{ textDecoration: 'none', color: 'inherit' }}
                   >
-                    <Typography color={"red"}>{page}</Typography>
-                  </Link>
+                    <Typography >{page}</Typography>
+                  </a>
                 </MenuItem>
               ))}
             </Menu>
@@ -167,15 +161,12 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <Link
-                  to={page.toLowerCase()}
-                  spy={true}
-                  smooth={true}
-                  duration={500}
+                <a
+                  href={`#${page.toLowerCase()}`}
                   style={{ textDecoration: 'none', color: 'inherit' }}
                 >
                   {page}
-                </Link>
+                </a>
               </Button>
             ))}
           </Box>
@@ -216,4 +207,3 @@ function ResponsiveAppBar() {
 }
 
 export default ResponsiveAppBar;
-
