@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -14,6 +14,8 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import styled from "@emotion/styled";
 import mg from "../assets/mg.png";
+
+// Elimina la importación de react-scroll, ya no la necesitas
 
 const pages = [ 'Tecnologias', 'Proyectos', 'Contacto'];
 const settings = ['Descargar cv', "Contactame"];
@@ -38,6 +40,7 @@ function ResponsiveAppBar() {
     setAnchorElUser(null);
 
     if (setting === "Descargar cv") {
+
       const downloadLink = document.createElement("a");
       downloadLink.href = "./CVMGPLANO.pdf"; 
       downloadLink.download = "CV_Matias_Graneros.pdf";
@@ -51,19 +54,10 @@ function ResponsiveAppBar() {
       const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(
         subject
       )}&body=${encodeURIComponent(body)}`;
-      
+
       window.open(mailtoUrl);
     }
   };
-
-  useEffect(() => {
-    document.addEventListener("DOMContentLoaded", () => {
-      const sections = document.querySelectorAll(".section");
-      sections.forEach((section, index) => {
-        section.id = `section${index + 1}`;
-      });
-    });
-  }, []);
 
   const Img = styled("img")({
     ObjectFit: "cover",
@@ -125,12 +119,10 @@ function ResponsiveAppBar() {
               }}
             >
               {pages.map((page) => (
-                <MenuItem  key={page} onClick={handleCloseNavMenu}>
-                  <a
-                    href={`#${page.toLowerCase()}`}
-                    style={{ textDecoration: 'none', color: 'inherit' }}
-                  >
-                    <Typography >{page}</Typography>
+                <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  {/* Utiliza anclas HTML en lugar de react-scroll */}
+                  <a href={`#${page.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <Typography color={"red"}>{page}</Typography>
                   </a>
                 </MenuItem>
               ))}
@@ -161,10 +153,8 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{ my: 2, color: 'white', display: 'block' }}
               >
-                <a
-                  href={`#${page.toLowerCase()}`}
-                  style={{ textDecoration: 'none', color: 'inherit' }}
-                >
+                {/* Utiliza anclas HTML en lugar de react-scroll */}
+                <a href={`#${page.toLowerCase()}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                   {page}
                 </a>
               </Button>
