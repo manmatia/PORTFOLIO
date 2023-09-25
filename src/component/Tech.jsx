@@ -33,7 +33,7 @@ export default function Tech() {
   return (
     <>
       <br /><br />
-      <Typography variant="h2" color={"black"} marginLeft={5}>Tecnologias</Typography>
+      <Typography variant="h2" color={"black"} marginLeft={5} data-aos="fade-right">Tecnologias</Typography>
       <Typography variant="h5" color={"black"} marginLeft={5}>Como desarrollador web, he adquirido experiencia en una amplia gama de tecnologías clave que son fundamentales para crear soluciones web efectivas. A continuación,  presento las tecnologías que he dominado y  utilizo con fluidez en mis proyectos:</Typography>
       <Paper sx={{
         display: "flex",
